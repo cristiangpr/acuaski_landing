@@ -12,7 +12,7 @@ import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/che
 import CableImage from "images/cable2.jpg";
 import HotelImage from "images/acuaski.jpg";
 import EventImage from "images/evento.jpg";
-
+import PackageImage from "images/triatlon2.jpg";
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
@@ -118,6 +118,14 @@ export default () => {
       pricingText: "USD 19/Day",
       rating: "5.0",
     },
+    {
+      imageSrc: PackageImage,
+      title: "Paquetes",
+      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
+      locationText: "Palo Alto, CA",
+      pricingText: "USD 19/Day",
+      rating: "5.0",
+    },
  
   ]
 
@@ -126,7 +134,10 @@ export default () => {
       <Content>
         <HeadingWithControl>
           <Heading>AcuaSki Community</Heading>
-          
+          <Controls>
+            <PrevButton onClick={sliderRef?.slickPrev}><ChevronLeftIcon/></PrevButton>
+            <NextButton onClick={sliderRef?.slickNext}><ChevronRightIcon/></NextButton>
+          </Controls>
         </HeadingWithControl>
         <CardSlider ref={setSliderRef} {...sliderSettings}>
           {cards.map((card, index) => (
