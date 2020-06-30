@@ -3,6 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "components/misc/Headings.js";
+import CableImage from "images/cable3.jpg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -14,7 +15,7 @@ const TextColumn = styled(Column)(props => [
 ]);
 
 const Image = styled.div(props => [
-  `background-image: url("${props.imageSrc}");`,
+  `background-image: url("${CableImage}");`,
   tw`rounded bg-cover bg-center h-full`,
 ]);
 const TextContent = tw.div`lg:py-8`;
